@@ -1,0 +1,3 @@
+"""
+FICHIER INIT
+"""
