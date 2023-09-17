@@ -44,15 +44,17 @@ Exemple d'utilisation :
 
 .. code-block:: python
 
-    img = Image.new("RGB", (1200, 1200), color="DarkTurquoise")
-    ctx = ImageDraw.Draw(img)
-
-    c = PremierPlan((0, 0), 50)
-    b = Background((0, 0), 50)
-
+    import draw_paysage
+    
+    img = draw_paysage.new("RGB", (1200, 1200), color="DarkTurquoise")
+    ctx = draw_paysage.Draw(img)
+    
+    c = draw_paysage.PremierPlan((0, 0), 50)
+    b = draw_paysage.Background((0, 0), 50)
+    
     b.herbe(ctx)
     c.soleil(ctx, 50, 50, 50)
     c.dessiner_arbre(ctx)
     c.oiseau(ctx)
-
+    
     img.save("dessin.png")
