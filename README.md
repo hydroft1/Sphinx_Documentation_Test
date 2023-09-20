@@ -1,3 +1,9 @@
+<div class="warning">
+    <strong>Assurez-vous d'importer les modules nécessaires (PIL) avant d'utiliser ce code.</strong>
+    <code>from PIL import Image, ImageDraw</code>
+</div>
+
+
 ## Classe `PremierPlan`
 
 Classe pour dessiner des éléments dans le premier plan de l'image (arbre, soleil, oiseau).
