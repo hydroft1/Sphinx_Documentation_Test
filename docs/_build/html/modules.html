@@ -9,6 +9,7 @@
         <title>Classes - Documentation Sphinx_Documentation_Test 0.0.1</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -154,8 +155,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+  <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Classes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#exemple-d-utilisation">Exemple d’utilisation</a></li>
 </ul>
@@ -192,16 +192,16 @@
           </label>
         </div>
         <article role="main">
-          <div class="admonition warning" id="module-Test">
+          <div class="admonition warning" id="module-draw_paysage">
 <p class="admonition-title">Avertissement</p>
-<p><strong>Assurez-vous d’importer les modules nécessaires (PIL) avant d’utiliser ce code.</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PIL</span> <span class="pre">import</span> <span class="pre">Image,</span> <span class="pre">ImageDraw</span></code></p>
+<p><strong>Assurez-vous d’avoir installer PILLOW.</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">PILLOW</span></code></p>
 </div>
 <section id="classes">
 <h1>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="Test.PremierPlan">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PremierPlan</span></span><a class="headerlink" href="#Test.PremierPlan" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.PremierPlan">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PremierPlan</span></span><a class="headerlink" href="#draw_paysage.PremierPlan" title="Link to this definition">#</a></dt>
 <dd><p>Classe pour dessiner des éléments dans le premier plan de l’image(harbre, soleil, oiseau).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
@@ -213,14 +213,14 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="Test.PremierPlan.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.__init__" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.PremierPlan.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#draw_paysage.PremierPlan.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Initialise un objet PremierPlan avec des coordonnées (xy) et une dimension (d).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="Test.PremierPlan.soleil">
-<span class="sig-name descname"><span class="pre">soleil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rayon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decalage_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decalage_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.soleil" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.PremierPlan.soleil">
+<span class="sig-name descname"><span class="pre">soleil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rayon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decalage_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decalage_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#draw_paysage.PremierPlan.soleil" title="Link to this definition">#</a></dt>
 <dd><p>Dessine un soleil sur l’image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
@@ -235,8 +235,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="Test.PremierPlan.dessiner_arbre">
-<span class="sig-name descname"><span class="pre">dessiner_arbre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.dessiner_arbre" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.PremierPlan.dessiner_arbre">
+<span class="sig-name descname"><span class="pre">dessiner_arbre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#draw_paysage.PremierPlan.dessiner_arbre" title="Link to this definition">#</a></dt>
 <dd><p>Dessine un arbre sur l’image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
@@ -246,8 +246,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="Test.PremierPlan.oiseau">
-<span class="sig-name descname"><span class="pre">oiseau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'black'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.oiseau" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.PremierPlan.oiseau">
+<span class="sig-name descname"><span class="pre">oiseau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'black'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#draw_paysage.PremierPlan.oiseau" title="Link to this definition">#</a></dt>
 <dd><p>Dessine un oiseau sur l’image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
@@ -262,8 +262,8 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="Test.Background">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Background</span></span><a class="headerlink" href="#Test.Background" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.Background">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Background</span></span><a class="headerlink" href="#draw_paysage.Background" title="Link to this definition">#</a></dt>
 <dd><p>Classe pour dessiner l’arrière-plan de l’image (l’herbe en bas de l’image).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
@@ -275,14 +275,14 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="Test.Background.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.Background.__init__" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.Background.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#draw_paysage.Background.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Initialise un objet Background avec des coordonnées (xy) et une dimension (d).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="Test.Background.herbe">
-<span class="sig-name descname"><span class="pre">herbe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.Background.herbe" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="draw_paysage.Background.herbe">
+<span class="sig-name descname"><span class="pre">herbe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#draw_paysage.Background.herbe" title="Link to this definition">#</a></dt>
 <dd><p>Dessine de l’herbe sur l’image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
@@ -364,16 +364,16 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Classes</a><ul>
-<li><a class="reference internal" href="#Test.PremierPlan"><code class="docutils literal notranslate"><span class="pre">PremierPlan</span></code></a><ul>
-<li><a class="reference internal" href="#Test.PremierPlan.__init__"><code class="docutils literal notranslate"><span class="pre">PremierPlan.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#Test.PremierPlan.soleil"><code class="docutils literal notranslate"><span class="pre">PremierPlan.soleil()</span></code></a></li>
-<li><a class="reference internal" href="#Test.PremierPlan.dessiner_arbre"><code class="docutils literal notranslate"><span class="pre">PremierPlan.dessiner_arbre()</span></code></a></li>
-<li><a class="reference internal" href="#Test.PremierPlan.oiseau"><code class="docutils literal notranslate"><span class="pre">PremierPlan.oiseau()</span></code></a></li>
+<li><a class="reference internal" href="#draw_paysage.PremierPlan"><code class="docutils literal notranslate"><span class="pre">PremierPlan</span></code></a><ul>
+<li><a class="reference internal" href="#draw_paysage.PremierPlan.__init__"><code class="docutils literal notranslate"><span class="pre">PremierPlan.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#draw_paysage.PremierPlan.soleil"><code class="docutils literal notranslate"><span class="pre">PremierPlan.soleil()</span></code></a></li>
+<li><a class="reference internal" href="#draw_paysage.PremierPlan.dessiner_arbre"><code class="docutils literal notranslate"><span class="pre">PremierPlan.dessiner_arbre()</span></code></a></li>
+<li><a class="reference internal" href="#draw_paysage.PremierPlan.oiseau"><code class="docutils literal notranslate"><span class="pre">PremierPlan.oiseau()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#Test.Background"><code class="docutils literal notranslate"><span class="pre">Background</span></code></a><ul>
-<li><a class="reference internal" href="#Test.Background.__init__"><code class="docutils literal notranslate"><span class="pre">Background.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#Test.Background.herbe"><code class="docutils literal notranslate"><span class="pre">Background.herbe()</span></code></a></li>
+<li><a class="reference internal" href="#draw_paysage.Background"><code class="docutils literal notranslate"><span class="pre">Background</span></code></a><ul>
+<li><a class="reference internal" href="#draw_paysage.Background.__init__"><code class="docutils literal notranslate"><span class="pre">Background.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#draw_paysage.Background.herbe"><code class="docutils literal notranslate"><span class="pre">Background.herbe()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -392,6 +392,8 @@
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/translations.js?v=d99ca74e"></script>
     </body>
 </html>

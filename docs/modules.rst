@@ -1,4 +1,4 @@
-.. py:module:: Test
+.. py:module:: draw_paysage
 
 .. warning::
    **Assurez-vous d'avoir installer PILLOW.**
