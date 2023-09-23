@@ -2,6 +2,10 @@
 
 Ce projet Python vous permet de créer des images en dessinant divers éléments tels que le soleil, un arbre et un oiseau sur un arrière-plan d'herbe. Il utilise la bibliothèque PIL (Python Imaging Library) pour la manipulation d'images.
 
+## Documentation
+
+si vous souhaitez consulter la documentation de `draw_paysage` : https://hydroft1.github.io/draw_paysage_documentation
+
 ## Utilisation
 
 Pour utiliser ce projet, suivez ces étapes :
