@@ -57,4 +57,5 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, 
 
 ## Licence
 
-Ce projet est sous licence MIT - voir le fichier `LICENSE <https://github.com/hydroft1/draw_paysage_documentation/master/LICENSE>` pour plus de détails.
+Ce projet est sous licence MIT - voir le fichier [LICENSE](https://github.com/hydroft1/draw_paysage_documentation/blob/master/LICENSE)
+ pour plus de détails.
