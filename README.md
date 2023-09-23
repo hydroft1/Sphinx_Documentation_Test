@@ -1,30 +1,56 @@
-<div class="warning">
-    <strong>Assurez-vous d'importer les modules nécessaires (PIL) avant d'utiliser ce code.</strong>
-    <code>from PIL import Image, ImageDraw</code>
-</div>
+# Projet de Dessin d'Image
+
+Ce projet Python vous permet de créer des images en dessinant divers éléments tels que le soleil, un arbre et un oiseau sur un arrière-plan d'herbe. Il utilise la bibliothèque PIL (Python Imaging Library) pour la manipulation d'images.
+
+## Utilisation
+
+Pour utiliser ce projet, suivez ces étapes :
+
+1. Clonez ce dépôt GitHub sur votre machine locale.
+```
+git clone https://github.com/hydroft1/projet-de-dessin-image.git
+```
+2. Assurez-vous d'avoir Python installé sur votre système.
+
+3. Installez la bibliothèque Pillow, qui est une extension de PIL, en utilisant pip.
+```
+pip install Pillow
+```
+
+4. Exécutez le fichier principal pour créer votre propre dessin.
+```
+python draw_paysage.py
+```
 
 
-## Classe `PremierPlan`
+L'image résultante sera sauvegardée sous le nom `dessin.png` dans le répertoire du projet.
 
-Classe pour dessiner des éléments dans le premier plan de l'image (arbre, soleil, oiseau).
+## Exemples
 
-### Paramètres
-- `x` (int): Coordonnée x.
-- `y` (int): Coordonnée y.
-- `dim` (int): Dimension de l'objet.
-
-### Exemple
+Voici un exemple de code qui utilise ce projet pour créer une image avec un soleil, un arbre et un oiseau :
 
 ```python
-from PIL import Image, ImageDraw
+import draw_paysage
 
-img = Image.new("RGB", (1200, 1200), color="DarkTurquoise")
-ctx = ImageDraw.Draw(img)
+img = draw_paysage.Image.new("RGB", (1200, 1200), color="DarkTurquoise")
+ctx = draw_paysage.ImageDraw.Draw(img)
 
-c = PremierPlan(0, 0, 50)
+c = draw_paysage.PremierPlan(50, 50, 50)
+b = draw_paysage.Background(ctx, ctx, ctx)
 
-c.soleil(ctx, 50, 50, 50)
+b.herbe(ctx)
+c.soleil(ctx, 100, 20, 50)
 c.dessiner_arbre(ctx)
 c.oiseau(ctx)
 
 img.save("dessin.png")
+img.show()
+```
+
+## Contributions
+
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, ouvrez une issue pour discuter de vos idées ou soumettez une demande d'extraction avec vos modifications. Vous pouvez aussi soutenir ce projet avec le sponsor github : https://github.com/sponsors/hydroft1
+
+## Licence
+
+Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
