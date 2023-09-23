@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" /><link rel="prev" title="Welcome to Sphinx_Documentation_Test’s documentation!" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" /><link rel="prev" title="Draw_Paysage Documentation" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Classes - Documentation Sphinx_Documentation_Test 0.0.1</title>
@@ -192,13 +192,26 @@
           </label>
         </div>
         <article role="main">
-          <p id="module-Test">Ce programme génère une image représentant un paysage simple avec un soleil, un arbre et un oiseau.</p>
+          <div class="admonition warning" id="module-Test">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Assurez-vous d’importer les modules nécessaires (PIL) avant d’utiliser ce code.</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">PIL</span> <span class="pre">import</span> <span class="pre">Image,</span> <span class="pre">ImageDraw</span></code></p>
+</div>
 <section id="classes">
 <h1>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="Test.PremierPlan">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Test.</span></span><span class="sig-name descname"><span class="pre">PremierPlan</span></span><a class="headerlink" href="#Test.PremierPlan" title="Link to this definition">#</a></dt>
-<dd><p>Classe pour dessiner des éléments en premier plan.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PremierPlan</span></span><a class="headerlink" href="#Test.PremierPlan" title="Link to this definition">#</a></dt>
+<dd><p>Classe pour dessiner des éléments dans le premier plan de l’image(harbre, soleil, oiseau).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – Coordonnée x.</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – Coordonnée y.</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – Dimension de l’objet</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="Test.PremierPlan.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.__init__" title="Link to this definition">#</a></dt>
@@ -208,27 +221,59 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="Test.PremierPlan.soleil">
 <span class="sig-name descname"><span class="pre">soleil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rayon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decalage_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decalage_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.soleil" title="Link to this definition">#</a></dt>
-<dd><p>Dessine un soleil avec le contexte de dessin (ctx), un rayon, et des décalages en X et en Y.</p>
+<dd><p>Dessine un soleil sur l’image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ctx</strong> (<em>PIL.ImageDraw.Draw</em>) – Contexte graphique pour l’image.</p></li>
+<li><p><strong>rayon</strong> (<em>int</em>) – Rayon du soleil.</p></li>
+<li><p><strong>decalage_x</strong> (<em>int</em>) – Décalage horizontal du bord de l’image(pour éviter que le soleil soit collé au bordure).</p></li>
+<li><p><strong>decalage_y</strong> (<em>int</em>) – Décalage vertical du bord de l’image(pour éviter que le soleil soit collé au bordure).</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Test.PremierPlan.dessiner_arbre">
 <span class="sig-name descname"><span class="pre">dessiner_arbre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.dessiner_arbre" title="Link to this definition">#</a></dt>
-<dd><p>Dessine un arbre avec le contexte de dessin (ctx).</p>
+<dd><p>Dessine un arbre sur l’image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ctx</strong> (<em>PIL.ImageDraw.Draw</em>) – contexte graphique pour l’image.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Test.PremierPlan.oiseau">
 <span class="sig-name descname"><span class="pre">oiseau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'black'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.PremierPlan.oiseau" title="Link to this definition">#</a></dt>
-<dd><p>Dessine un oiseau avec le contexte de dessin (ctx) et une couleur spécifiée (par défaut, noir).</p>
+<dd><p>Dessine un oiseau sur l’image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ctx</strong> (<em>PIL.ImageDraw.Draw</em>) – Contexte graphique pour l’image.</p></li>
+<li><p><strong>color</strong> (<em>str</em>) – Couleur de l’oiseau.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="Test.Background">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Test.</span></span><span class="sig-name descname"><span class="pre">Background</span></span><a class="headerlink" href="#Test.Background" title="Link to this definition">#</a></dt>
-<dd><p>Classe pour dessiner l’arrière-plan.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Background</span></span><a class="headerlink" href="#Test.Background" title="Link to this definition">#</a></dt>
+<dd><p>Classe pour dessiner l’arrière-plan de l’image (l’herbe en bas de l’image).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – Coordonnée x.</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – Coordonnée y.</p></li>
+<li><p><strong>dim</strong> (<em>int</em>) – Dimension de l’objet.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="Test.Background.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.Background.__init__" title="Link to this definition">#</a></dt>
@@ -238,7 +283,12 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="Test.Background.herbe">
 <span class="sig-name descname"><span class="pre">herbe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Test.Background.herbe" title="Link to this definition">#</a></dt>
-<dd><p>Dessine de l’herbe dans l’arrière-plan avec le contexte de dessin (ctx).</p>
+<dd><p>Dessine de l’herbe sur l’image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ctx</strong> (<em>PIL.ImageDraw.Draw</em>) – Contexte graphique pour l’image.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -247,18 +297,21 @@
 <section id="exemple-d-utilisation">
 <h1>Exemple d’utilisation<a class="headerlink" href="#exemple-d-utilisation" title="Link to this heading">#</a></h1>
 <p>Exemple d’utilisation :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1200</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;DarkTurquoise&quot;</span><span class="p">)</span>
-<span class="n">ctx</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">draw_paysage</span>
 
-<span class="n">c</span> <span class="o">=</span> <span class="n">PremierPlan</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">Background</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">draw_paysage</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1200</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;DarkTurquoise&quot;</span><span class="p">)</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="n">draw_paysage</span><span class="o">.</span><span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">draw_paysage</span><span class="o">.</span><span class="n">PremierPlan</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">draw_paysage</span><span class="o">.</span><span class="n">Background</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">ctx</span><span class="p">)</span>
 
 <span class="n">b</span><span class="o">.</span><span class="n">herbe</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
-<span class="n">c</span><span class="o">.</span><span class="n">soleil</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">soleil</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">c</span><span class="o">.</span><span class="n">dessiner_arbre</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
 <span class="n">c</span><span class="o">.</span><span class="n">oiseau</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
 
 <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;dessin.png&quot;</span><span class="p">)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
