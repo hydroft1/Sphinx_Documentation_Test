@@ -1,9 +1,9 @@
 .. py:module:: Test
 
 .. warning::
-   **Assurez-vous d'importer les modules nécessaires (PIL) avant d'utiliser ce code.**
+   **Assurez-vous d'avoir installer PILLOW.**
    
-   ``from PIL import Image, ImageDraw``
+   ``pip install PILLOW``
 
 Classes
 =======
